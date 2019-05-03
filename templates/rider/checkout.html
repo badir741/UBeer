@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <nav class="navbar sticky-top navbar-light bg-light">
+            <a class="navbar-profile" href="#">Profile</a>
+            <a class="navbar-signout" href="../logout">Sign Out</a>
+        </nav>
+        <div class="accordion">
+            <div class="card checkoutCard">
+                <div class="card-header">
+                    <div class="card-columns">
+                        <div class="row">
+                            <div class="col-12 mx-auto text-center">
+                                <h2>Confirm Order</h2>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mx-auto text-center">
+                                <img src="{{ img }}" alt="" class="checkoutImg">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mx-auto text-center">
+                                <h4 class="checkoutEstablishment">{{ name }}</h4>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mx-auto text-center">
+                                <span>Total: ${{ amount }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 mx-auto text-center checkoutForm">
+                                {{ form.render }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <style>
+    html {background-color:#003f5b;}
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="container riderContainer">
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <a class="navbar-profile" href="#">Profile</a>
+        <a class="navbar-signout" href="../logout">Sign Out</a>
+    </nav>
+
+    <div class="accordion" id="searchAccordion">
+        {% for establishment in establishments %}
+            <div class="card" data-toggle data-parent="#searchAccordion" data-target="#est_{{ establishment.id }}" aria-expanded="false" aria-controls="est_{{ establishment.id }}">
+                <div class="card-header" id="{{ establishment.name }}" data-toggle="collapse" data-target="#est_{{ establishment.id }}">
+                    <div class="card-columns">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <img src="{{ establishment.image.url }}" alt="" class="riderHomeImg">
+                                </div>
+                                <div class="col-auto cardMiddle">
+                                    <span class="establishmentName">{{ establishment.name }}</span><br>
+                                    <span>{{ establishment.info }}</span><br>
+                                    <span>Rating: {{ establishment.rating }}/10</span><br>
+                                    <span>Min tab: ${{ establishment.minimum_tab }}</span><br>
+                                    <span>Ride time: {{ establishment.ride_time }} min</span>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div id="est_{{ establishment.id }}" class="collapse" aria-labelledby="{{ establishment.name }}"
+                     data-parent="#searchAccordion">
+                    <div class="card card-body" aria-labelledby="{{ establishment.name }}">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <input name="amount" type="number" class="form-control tabInput" id="tab">
+                                <input name="name" type="hidden" value="{{ establishment.name }}">
+                                <input name="img" type="hidden" value="{{ establishment.image.url }}">
+                                <button type="submit" class="btn btn-primary float-right tabSubmit" >Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

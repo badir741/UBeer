@@ -1,0 +1,26 @@
+{%  load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UBeer</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'custom/base.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Raleway" rel="stylesheet">
+    {% block extrahead %}
+    {% endblock %}
+</head>
+<body>
+    <div id="base-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="{% static 'bootstrap/jquery.js' %}"></script>
+    <script src="{% static 'bootstrap/bootstrap.js' %}"></script>
+    {% block extrascript %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <nav class="navbar sticky-top navbar-light bg-light">
+        <a class="navbar-profile" href="#">Profile</a>
+        <a class="navbar-signout" href="../logout">Sign Out</a>
+    </nav>
+    <div class="row">
+        <div class="col-12 text-center">
+            {{ message }}
+        </div>
+        <div class="col-12 text-center">
+            <button class="btn btn-primary" onclick="location.href='../../riderHome'">Back to Home</button>
+        </div>
+    </div>
+</div>
+{% endblock %}

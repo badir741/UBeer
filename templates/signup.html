@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrahead %}
+    <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div id="backgroundImage"></div>
+
+    <div class="container login">
+        <div class="row">
+            <div class="col loginName" style="margin:30px 0 0 0 !important">
+                Ubeer
+            </div>
+        </div>
+
+        <div class="mx-auto loginFields">
+            <form method = "post">
+                {% csrf_token %}
+                <div class="row form-group">
+                    <input type="text" class="form-control" id="loginUser" name="username" placeholder="Username">
+                </div>
+                <div class="row form-group">
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+                </div>
+                <div class="row form-group">
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name">
+                </div>
+                <div class="row form-group">
+                    <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Password">
+                </div>
+                <div class="row form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="row">
+                    <button type="submit" class="loginButton">Sign Up</button>
+                </div>
+            </form>
+
+            <div id="signupPrompt">
+                <span class="asdf" style="color:#ececec !important">Already have an account?</span>
+                <span class="asdf"><a href="../login" style="display:inline-block;margin-bottom:20px" id="signupLink">Click here to log in.</a></span>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

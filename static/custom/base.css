@@ -1,0 +1,206 @@
+html, body {
+    background-color: #003f5b;
+    height: 100%;
+    margin: 0;
+}
+
+#backgroundImage {
+    background-image: url("/static/login-background.jpg");
+    background-position: center;
+    background-size: 150% 120%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0.5;
+    width: 100%;
+}
+
+#base-container {
+    height: 100%;
+    padding: 0;
+}
+
+.container {
+    position:absolute;
+}
+
+.login {
+    margin-top: 30px;
+}
+
+.loginLogo {
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 50%;
+    box-shadow: 10px 10px 30px;
+    max-width: 100%;
+    height: 45vw;
+    width: 45vw;
+}
+
+.loginName {
+    margin: 80px 0 40px 0;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.loginFields  {
+    padding: 30px 30px 0 30px;
+}
+
+.loginPasswordText {
+    margin-top: 20px;
+}
+
+.loginButton {
+    margin-top: 25px;
+    text-align: center;
+    border: none;
+    background: #3de5b6;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    height: 40px;
+}
+
+#signupLink {
+    color: #3de5b6;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.loginLink {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#signupPrompt {
+    margin-top: 30px;
+}
+
+.asdf {
+    text-align: center;
+    width: 100%;
+    color: white;
+    float: left;
+}
+
+.form-group {
+    font-size: 30px;
+}
+
+.form-control {
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    font-size: 20px;
+}
+
+.navbar-profile {
+    color: black;
+}
+
+.navbar-signout {
+    color: black;
+}
+
+.riderHomeImg {
+    height: 28vw;
+    width: 28vw;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 10px;
+}
+
+.checkoutImg {
+    height: 69vw;
+    width: 69vw;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.checkoutEstablishment {
+    margin-bottom: 0px;
+    /*text-transform: uppercase;*/
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bold;
+}
+
+.checkoutForm {
+    margin-top: 20px;
+}
+
+.tabInput {
+    width: 68%;
+    display: inline;
+}
+
+.tabSubmit {
+    margin-top: 7px;
+    font-size: 17px;
+}
+
+.establishmentName {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #e1e1e1;
+}
+
+.cardMiddle {
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Raleway', sans-serif;
+}
+
+.card-header {
+    background-color: white;
+}
+
+.riderContainer {
+    background-color: #003f5b;
+}
+
+.btn-primary {
+    background-color: #0ad098;
+    border-color: #0ad098;
+}
+
+.checkoutCard {
+    font-family: 'Raleway', sans-serif;
+}
+
+/*Small (landscape phones)*/
+@media screen and (min-width: 576px) {
+}
+
+/*Medium (tablets)*/
+@media screen and (min-width: 768px) {
+}
+
+/*Large (desktops)*/
+@media screen and (min-width: 992px) {
+    .loginName {
+        color: white;
+    }
+}
+
+/*Extra Large (large desktops*/
+@media screen and (min-width: 1200px) {
+    .loginName {
+        color: rebeccapurple;
+    }
+}
